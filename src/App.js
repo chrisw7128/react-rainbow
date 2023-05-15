@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <div className="App">
-      {colorMap} <ColorForm onAddColor={onAddcolor} />
+      {colorMap} <ColorForm onAddColor={onAddColor} />
     </div>
   );
 }

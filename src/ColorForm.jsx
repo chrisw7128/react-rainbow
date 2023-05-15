@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 
-export default function ColorForm(props) {
+export default function ColorForm({ onAddColor }) {
   let [inputVal, setInputVal] = useState("");
+
+  const onSubmitForm = e => {
+    e.preventDefault();
+    onAddColor(inputVal);
+    setInputVal("");
+  };
 
   return (
     <div>
-      <form>
+      <form onSubmit={onSubmitForm}>
         <input
           type="text"
           value={inputVal}
